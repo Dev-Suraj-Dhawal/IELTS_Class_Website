@@ -1,5 +1,8 @@
-
 @import "tailwindcss";
+
+* {
+  user-select: none;
+}
 
 .design {
   font-family: 'Satisfy', cursive;
@@ -9,6 +12,15 @@
 
 /* Custom styles to refine the design and add subtle enhancements */
 body {
+  -webkit-user-select: none;
+  /* Safari/Chrome */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none;
+  /* Standard */
+
   font-family: 'Inter', sans-serif;
   background-color: #f9fafb;
   /* Lighter background for a modern feel */
@@ -58,6 +70,13 @@ body {
 
 .animate-bounceArrow {
   animation: bounceArrow 1.5s infinite;
+}
+
+img {
+  -webkit-user-drag: none;
+  -user-drag: none;
+  pointer-events: none;
+  /* Prevent click + drag */
 }
 
 /* Instructor Card specific styles */
