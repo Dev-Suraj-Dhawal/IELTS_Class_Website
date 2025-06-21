@@ -1,0 +1,461 @@
+
+@import "tailwindcss";
+
+.design {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.80rem;
+  line-height: 2.75rem;
+}
+
+/* Custom styles to refine the design and add subtle enhancements */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  /* Lighter background for a modern feel */
+  display: flex;
+  flex-direction: column;
+  /* Allow content to stack */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 10px;
+  /* Adjusted padding for overall layout */
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
+  transition: background-color 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounceArrow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-fadeInScale {
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+.animate-bounceArrow {
+  animation: bounceArrow 1.5s infinite;
+}
+
+/* Instructor Card specific styles */
+.instructor-card {
+  background-color: #ffffff;
+  border-radius: 2rem;
+  /* More rounded corners */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.08);
+  /* Enhanced shadow */
+  padding: 2rem;
+  /* Adjusted padding */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: default;
+  /* Default cursor for the card itself */
+}
+
+.instructor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.instructor-card img {
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+  /* Subtle drop shadow for images */
+}
+
+.instructor-card .profile-img {
+  border: 4px solid #3b82f6;
+  /* Blue border for profile pic */
+  box-shadow: 0 0 0 3px #bfdbfe;
+  /* Lighter blue outer glow */
+}
+
+.qr-area {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.qr-area:hover {
+  transform: scale(1.05);
+}
+
+.qr-area .qr-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.qr-area:hover .qr-img {
+  transform: scale(1.1);
+}
+
+/* Main Form Section styles */
+.main-container {
+  margin-top: 3rem;
+  /* Spacing between instructor card and main section */
+  background-color: #ffffff;
+  border-radius: 2rem;
+  /* Consistent rounded corners */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.08);
+  /* Consistent shadow */
+  overflow: hidden;
+  position: relative;
+  /* For the green line */
+}
+
+.left-panel {
+  padding: 2.5rem;
+  /* Consistent padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* For green line within panel */
+}
+
+.left-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  /* Thickness of the line */
+  height: 100%;
+  /* Full height */
+  background-color: #10b981;
+  /* Tailwind green-600 */
+  border-radius: 2rem 0 0 2rem;
+  /* Match container border-radius */
+  z-index: 0;
+}
+
+.header-top {
+  font-family: 'Satisfy', cursive;
+  color: #10b981;
+  /* Tailwind green-600 */
+  font-size: 3rem;
+  /* Larger font for emphasis */
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.header-main {
+  background-image: linear-gradient(to right, #3b82f6, #2563eb);
+  /* Subtle blue gradient */
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  /* Adjusted size */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 0 0 1rem 1rem;
+  /* Rounded bottom corners */
+  width: 90%;
+  /* Adjusted width */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  position: relative;
+  /* To ensure shadow is visible */
+}
+
+.section-separator {
+  background-color: #10b981;
+  /* Tailwind green-600 */
+  height: 8px;
+  width: 70%;
+  margin: -0.5rem auto 1.5rem auto;
+  /* Overlap and spacing */
+  border-radius: 0 0 0.5rem 0.5rem;
+  z-index: 0;
+}
+
+.image-gallery img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Right Panel specific styles */
+.right-panel {
+  padding: 2.5rem;
+  /* Consistent padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center content horizontally */
+}
+
+.tab-button {
+  background-color: #f3f4f6;
+  /* Light gray for inactive */
+  color: #4b5563;
+  /* Darker gray text */
+  border: 1px solid #d1d5db;
+  /* Light gray border */
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* Subtle inner shadow */
+}
+
+.tab-button.active {
+  background-image: linear-gradient(to right, #3b82f6, #2563eb);
+  /* Blue gradient for active */
+  color: #ffffff;
+  border-color: #2563eb;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  /* Blue shadow for active */
+}
+
+.tab-button:hover:not(.active) {
+  background-color: #e0e9ff;
+  /* Lighter blue on hover */
+  color: #1d4ed8;
+  /* Darker blue text */
+  border-color: #a7c8ff;
+}
+
+.step-item a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  /* Ensure no underline */
+}
+
+.step-item a:hover {
+  transform: translateY(-3px);
+  /* Lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+  /* More pronounced shadow */
+  background-color: #f7f7f7;
+  /* Very light background on hover */
+}
+
+.step-number {
+  font-size: 2rem;
+  /* Slightly larger number */
+  font-weight: 700;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  /* More prominent shadow */
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Specific colors for step numbers - adjusted to Tailwind palette */
+.step-item:nth-child(1) .step-number {
+  background-image: linear-gradient(to bottom right, #3b82f6, #2563eb);
+}
+
+/* Blue-600 to Blue-700 */
+.step-item:nth-child(2) .step-number {
+  background-image: linear-gradient(to bottom right, #3b82f6, #2563eb);
+}
+
+/* Blue-600 to Blue-700 */
+.step-item:nth-child(3) .step-number {
+  background-image: linear-gradient(to bottom right, #10b981, #059669);
+}
+
+/* Green-600 to Green-700 */
+
+.step-content h3 {
+  font-size: 1.4rem;
+  /* Larger headings */
+  font-weight: 700;
+  color: #1f2937;
+  /* Tailwind gray-800 */
+}
+
+.step-content p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  /* Tailwind gray-600 */
+}
+
+.step-content p.text-xs {
+  font-size: 0.75rem;
+  color: #6b7280;
+  /* Tailwind gray-500 */
+}
+
+.schedule {
+  background-color: #e0f2f7;
+  /* Light blue background for distinction */
+  border-radius: 1rem;
+  /* Rounded corners */
+  padding: 1.5rem;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08);
+  /* Inner shadow for depth */
+  border: 1px solid #bae6fd;
+  /* Light border */
+}
+
+.schedule h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.75px;
+  /* More distinct letter spacing */
+}
+
+.schedule-item {
+  font-size: 0.95rem;
+  color: #374151;
+  /* Tailwind gray-700 */
+}
+
+.schedule-item strong {
+  font-weight: 600;
+  /* Semibold for day */
+}
+
+.schedule-note {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  body {
+    padding: 30px 20px;
+    /* More padding on desktop */
+  }
+
+  .instructor-card {
+    max-width: 400px;
+    /* Max width for instructor card */
+    margin-top: 0;
+    /* Remove top margin on desktop if centered vertically */
+  }
+
+  .main-container {
+    flex-direction: row;
+    /* Side-by-side layout */
+    max-width: 1000px;
+    /* Wider container for desktop */
+    margin-top: 4rem;
+    /* More spacing */
+  }
+
+  .left-panel {
+    flex: 1;
+    padding: 3rem;
+    /* More padding */
+    padding-left: 3.5rem;
+    /* Account for green line */
+    border-right: 1px solid #e5e7eb;
+    /* Subtle separator line */
+  }
+
+  .right-panel {
+    flex: 1.5;
+    /* Right panel wider */
+    padding: 3rem;
+    /* More padding */
+  }
+
+  .header-top {
+    font-size: 4rem;
+    /* Larger on desktop */
+  }
+
+  .header-main {
+    padding: 1.25rem 2rem;
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .section-separator {
+    width: 60%;
+    margin: -0.75rem auto 2.5rem auto;
+    /* More spacing */
+  }
+
+  .image-gallery img {
+    height: 250px;
+    /* Taller images on desktop */
+  }
+
+  .how-often-tabs {
+    max-width: 400px;
+    gap: 1rem;
+  }
+
+  .tab-button {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .instruction-text {
+    font-size: 0.9rem;
+  }
+
+  .form-steps {
+    max-width: 500px;
+    gap: 1.5rem;
+  }
+
+  .step-item a {
+    gap: 1rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    font-size: 2.2rem;
+  }
+
+  .step-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .step-content p {
+    font-size: 1rem;
+  }
+
+  .schedule {
+    max-width: 500px;
+    padding: 2rem;
+  }
+
+  .schedule h3 {
+    font-size: 1.25rem;
+  }
+
+  .schedule-item {
+    font-size: 1rem;
+  }
+
+  .schedule-item strong {
+    width: 90px;
+  }
+
+  .schedule-note {
+    font-size: 0.95rem;
+  }
+}

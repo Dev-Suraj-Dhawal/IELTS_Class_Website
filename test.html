@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grace International - Instructor & Forms</title>
+    <link rel="stylesheet" href="test.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for "Hi there." and general text.
+         'Satisfy' for the script-like "Hi there."
+         'Inter' for general text.
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for icons (optional, but useful for generic icons if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <!-- Instructor Card -->
+    <div class="instructor-card max-w-sm w-full mx-auto mt-8 text-center animate-fadeInScale" style="animation-delay: 0.1s;">
+        <img src="./Assets/Grace-Logo.png" alt="Grace Logo" class="mx-auto w-28 mb-3" onerror="this.onerror=null; this.src='https://placehold.co/128x128/ccc/000?text=Logo';" />
+        <img src="./Assets/instructor.jpeg" alt="Instructor Profile" class="profile-img w-32 h-32 mx-auto rounded-full object-cover mb-3" onerror="this.onerror=null; this.src='https://placehold.co/150x150/ccc/000?text=Profile';" />
+        
+        <div onclick="window.open('https://wa.me/message/EETIQMZAFI35L1', '_blank')" class="qr-area block">
+            <p class="text-sm font-semibold text-blue-700">Tap QR</p>
+            <img src="./Assets/whatsapp_qr.jpeg" alt="QR Code" class="qr-img mx-auto w-24 h-24 object-contain mt-1" onerror="this.onerror=null; this.src='https://placehold.co/100x100/ccc/000?text=QR';" />
+            <p class="text-xs text-gray-500">to send message</p>
+        </div>
+        
+        <h2 class="text-xl font-bold mt-4 design">Bimal Sapkota</h2>
+        <p class="text-blue-600 font-semibold text-lg">IELTS INSTRUCTOR</p>
+        <p class="text-gray-700 text-sm mt-1">GRACE INTERNATIONAL BUTWAL</p>
+        <p class="text-sm text-gray-500 mt-3">For your registration and attendance.</p>
+        <div class="text-3xl mt-3 text-blue-500 animate-bounceArrow">&#x25BC;</div>
+    </div>
+
+    <!-- Main Form Section -->
+    <div class="main-container w-full mx-auto mt-14 px-4 py-8 md:px-8 flex flex-col md:flex-row gap-6 animate-fadeInScale" style="animation-delay: 0.3s;">
+        <!-- Left Panel -->
+        <div class="left-panel md:w-1/2">
+            <h1 class="header-top text-center">Hi there.</h1>
+            <div class="header-main text-center">
+                WELCOME TO<br />GRACE INTERNATIONAL
+            </div>
+            <div class="section-separator"></div>
+            <div class="image-gallery grid grid-cols-1 gap-4 w-11/12 mx-auto">
+                <img src="./Assets/class1.jpeg" alt="Classroom Scene 1" class="rounded-xl shadow-md object-cover h-48 w-full" onerror="this.onerror=null; this.src='https://placehold.co/600x200/ccc/000?text=Missing+Image';" />
+                <img src="./Assets/class2.jpeg" alt="Classroom Scene 2" class="rounded-xl shadow-md object-cover h-48 w-full" onerror="this.onerror=null; this.src='https://placehold.co/600x200/ccc/000?text=Missing+Image';" />
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel md:w-3/5">
+            <h2 class="text-center text-xl md:text-2xl font-semibold text-gray-700 mb-5">How often to fill the form</h2>
+            <div class="flex justify-center gap-3 md:gap-4 mb-5 w-full max-w-sm">
+                <button class="tab-button active flex-1 px-4 py-2 rounded-full text-sm md:text-base" data-tab="once">1 | Once</button>
+                <button class="tab-button flex-1 px-4 py-2 rounded-full text-sm md:text-base" data-tab="daily">2 | Daily</button>
+                <button class="tab-button flex-1 px-4 py-2 rounded-full text-sm md:text-base" data-tab="weekly">3 | Weekly</button>
+            </div>
+            <p class="text-center text-sm text-gray-500 mb-7">Tap 1, 2 and 3 to access the form.</p>
+
+            <!-- Form content sections -->
+            <div id="form-once" data-tab-content="once" class="form-content space-y-6 w-full max-w-lg">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSchyJ9mtkRMxSlUNCOdVsDDsNfjbrZ3rtjpYpP6nf3LgTV6hw/viewform" target="_blank"
+                    class="step-item flex items-center gap-4 p-3 md:p-4 rounded-xl shadow-md bg-white hover:bg-gray-50">
+                    <div class="step-number w-14 h-14 flex items-center justify-center rounded-full">1</div>
+                    <div class="step-content">
+                        <h3>NEW TO IELTS</h3>
+                        <p>Fill this form Once</p>
+                        <p class="text-xs">and then mark your attendance</p>
+                    </div>
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeADznKyfVel4-whtGSKtkU-vf4NOa3g8iSnxdFnBJiR0At5w/viewform" target="_blank"
+                    class="step-item flex items-center gap-4 p-3 md:p-4 rounded-xl shadow-md bg-white hover:bg-gray-50">
+                    <div class="step-number w-14 h-14 flex items-center justify-center rounded-full">2</div>
+                    <div class="step-content">
+                        <h3>ATTENDANCE</h3>
+                        <p>If you are present in class</p>
+                    </div>
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKA8--BvwxY5Ugp7uy2ndaWf_9C47VFYROhtDcdreeiPTebw/viewform" target="_blank"
+                    class="step-item flex items-center gap-4 p-3 md:p-4 rounded-xl shadow-md bg-white hover:bg-gray-50">
+                    <div class="step-number w-14 h-14 flex items-center justify-center rounded-full">3</div>
+                    <div class="step-content">
+                        <h3>MOCK TEST</h3>
+                        <p>Register every Thursday</p>
+                    </div>
+                </a>
+            </div>
+
+            <div id="form-daily" data-tab-content="daily" class="form-content space-y-6 w-full max-w-lg hidden">
+                <p class="text-center text-gray-600 p-4 rounded-md bg-yellow-50 text-yellow-800">
+                    Daily attendance form will appear here. Please select the 'Once' tab for initial registration.
+                </p>
+                <!-- Daily Form Content Example -->
+                <div class="step-item flex items-center gap-4 p-3 md:p-4 rounded-xl shadow-md bg-white">
+                    <div class="step-number bg-yellow-500 text-white w-14 h-14 flex items-center justify-center rounded-full">D</div>
+                    <div class="step-content">
+                        <h3>DAILY ATTENDANCE</h3>
+                        <p>Mark your daily presence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="form-weekly" data-tab-content="weekly" class="form-content space-y-6 w-full max-w-lg hidden">
+                <p class="text-center text-gray-600 p-4 rounded-md bg-green-50 text-green-800">
+                    Weekly activity forms (e.g., progress tracking, assignments) will be here.
+                </p>
+                <!-- Weekly Form Content Example -->
+                <div class="step-item flex items-center gap-4 p-3 md:p-4 rounded-xl shadow-md bg-white">
+                    <div class="step-number bg-purple-500 text-white w-14 h-14 flex items-center justify-center rounded-full">W</div>
+                    <div class="step-content">
+                        <h3>WEEKLY PROGRESS</h3>
+                        <p>Submit your weekly progress report.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule mt-8 w-full max-w-lg">
+                <h3 class="text-center uppercase font-bold mb-4">Class Schedule</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p class="flex items-center">
+                        <strong class="w-24 flex-shrink-0">Sunday:</strong>
+                        <span>Speaking Practice / Mock</span>
+                    </p>
+                    <p class="flex items-center">
+                        <strong class="w-24 flex-shrink-0">Friday:</strong>
+                        <span>WLR | Mock test</span>
+                    </p>
+                </div>
+                <p class="text-center font-semibold text-gray-600 mt-4">Monday to Thursday Class</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const formContents = document.querySelectorAll('.form-content');
+
+            // Function to show content based on tab
+            const showTabContent = (tabId) => {
+                formContents.forEach(content => {
+                    if (content.dataset.tabContent === tabId) {
+                        content.classList.remove('hidden');
+                    } else {
+                        content.classList.add('hidden');
+                    }
+                });
+            };
+
+            // Initial active tab state
+            tabButtons.forEach(button => {
+                if (button.classList.contains('active')) {
+                    showTabContent(button.dataset.tab);
+                }
+                // Add click listener
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    showTabContent(button.dataset.tab);
+                });
+            });
+
+            // Handle step item clicks (for demonstration, just console log)
+            document.querySelectorAll('.step-item a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Actual navigation happens because target="_blank" is used,
+                    // but we can still log for internal understanding.
+                    const title = link.querySelector('h3').innerText;
+                    console.log(`${title} link clicked! Opening in new tab.`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
